@@ -55,7 +55,7 @@ class XDebugParser
                 $this->functions[$funcNr]['internal'] = !(bool) $parts[6];
                 $this->functions[$funcNr]['file'] = $parts[8];
                 $this->functions[$funcNr]['line'] = $parts[9];
-                if($parts[7]) {
+                if ($parts[7]) {
                     $this->functions[$funcNr]['params'] = array($parts[7]);
                 } else {
                     $this->functions[$funcNr]['params'] = array_slice($parts, 11);
@@ -98,7 +98,6 @@ class XDebugParser
         echo '</div>';
         echo '</div>';
 
-
         $level = 0;
         foreach ($this->functions as $func) {
             // depth wrapper
@@ -135,6 +134,12 @@ class XDebugParser
             echo '</div>';
 
             echo '</div>';
+        }
+
+        if ($level > 0) {
+            for ($i = 0; $i < $level; $i++) {
+                echo '</div>';
+            }
         }
 
         $html = ob_get_contents();

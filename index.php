@@ -1,5 +1,7 @@
+<!doctype html>
 <html>
 <head>
+    <title>XDebug Trace Tree</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
     <script src="script.js"></script>
