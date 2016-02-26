@@ -1,0 +1,76 @@
+div.d {
+    padding-left: 2em;
+    cursor: pointer;
+}
+
+div.d.hide {
+    height: 5px;
+    background-color: #ccc;
+}
+
+div.d.hide * {
+    display: none;
+}
+
+
+div.f {
+    cursor: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+div.f div {
+    padding: 5px 0;
+
+}
+
+div.f div.func {
+    flex-grow: 1;
+}
+
+div.f div.data {
+    flex-grow: 0;
+    width: 450px;
+    min-width: 450px;
+    max-width: 450px;
+}
+
+span {
+    display: inline-block;
+    line-height: 1.1em;
+    vertical-align: bottom;
+}
+
+span.short {
+    max-height: 1.1em;
+    overflow: hidden;
+}
+
+span.name {
+    font-weight: bold;
+}
+
+span.params {
+    color: #468b5e;
+    cursor: pointer;
+}
+
+span.return {
+    color: #8a2200;
+    cursor: pointer;
+}
+
+span.time,
+span.memorydiff,
+span.timediff {
+    width: 150px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+div.header {
+    width: 100%;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
