@@ -2,9 +2,9 @@
 <html>
 <head>
     <title>XDebug Trace Tree</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res/style.css">
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="res/script.js"></script>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         ?>
     </select>
     <button type="submit">Load</button><br />
-    Files are read from xdebug.trace_output_dir = <?php echo htmlspecialchars($dir)?>
+    <p>Files are read from <code>xdebug.trace_output_dir = <?php echo htmlspecialchars($dir)?></code></p>
 </form>
 
 <ul class="help">
@@ -44,7 +44,7 @@
 <?php
 
 if (!empty($_REQUEST['file'])) {
-    require_once 'XDebugParser.php';
+    require_once 'res/XDebugParser.php';
     $parser = new XDebugParser($_REQUEST['file']);
     $parser->parse();
     echo $parser->getTraceHTML();
