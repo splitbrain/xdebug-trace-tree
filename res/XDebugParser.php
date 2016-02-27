@@ -92,6 +92,7 @@ class XDebugParser
         echo '<div class="f header">';
         echo '<div class="func">Function Call</div>';
         echo '<div class="data">';
+        echo '<span class="file">File:Line</span>';
         echo '<span class="timediff">ΔTime</span>';
         echo '<span class="memorydiff">ΔMemory</span>';
         echo '<span class="time">Time</span>';
@@ -128,6 +129,7 @@ class XDebugParser
             echo '</div>';
 
             echo '<div class="data">';
+            echo '<span class="file" title="'.htmlspecialchars($func['file'].':'.$func['line']).'">'.htmlspecialchars(basename($func['file']).':'.$func['line']).'</span>';
             echo '<span class="timediff">' . sprintf('%f', $func['time.diff']) . '</span>';
             echo '<span class="memorydiff">' . sprintf('%d', $func['memory.diff']) . '</span>';
             echo '<span class="time">' . sprintf('%f', $func['time.enter']) . '</span>';

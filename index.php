@@ -34,12 +34,16 @@
     <li>click a function name to collapse all calls to the same function</li>
     <li>click the parameter list to expand it</li>
     <li>click the return list to expand it</li>
-    <li>use the checkbox to hide all PHP internal functions</li>
+    <li>click the time to mark the line important</li>
+    <li>use checkboxes to hide all PHP internal functions or limit to important lines</li>
 </ul>
 
 <form class="options">
-    <input type="checkbox" value="1" checked="checked" id="internal"><label for="internal">Show internal
-        functions</label>
+    <input type="checkbox" value="1" checked="checked" id="internal">
+    <label for="internal">Show internal functions</label>
+
+    <input type="checkbox" value="1" id="marked">
+    <label for="marked">Show important only (slow)</label>
 </form>
 
 
