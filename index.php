@@ -18,7 +18,8 @@
         }
         $files = glob("$dir/*.xt");
         foreach ($files as $file) {
-            echo '<option value="' . htmlspecialchars($file) . '">' . htmlspecialchars(basename($file)) . '</option>';
+            $checked = ($file == $_REQUEST['file']) ? 'selected="selected"' : '';
+            echo '<option value="' . htmlspecialchars($file) . '" '.$checked.'>' . htmlspecialchars(basename($file)) . '</option>';
         }
         ?>
     </select>
