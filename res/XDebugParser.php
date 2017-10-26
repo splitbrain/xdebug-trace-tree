@@ -72,7 +72,7 @@ class XDebugParser
                 $this->functions[$funcNr]['time.exit'] = $parts[3];
                 $this->functions[$funcNr]['memory.exit'] = $parts[4];
                 $this->functions[$funcNr]['time.diff'] = $this->functions[$funcNr]['time.exit'] - $this->functions[$funcNr]['time.enter'];
-                $this->functions[$funcNr]['memory.diff'] = $this->functions[$funcNr]['memory.exit'] - $this->functions[$funcNr]['memory.enter'];
+                $this->functions[$funcNr]['memory.diff'] = (int) $this->functions[$funcNr]['memory.exit'] - (int) $this->functions[$funcNr]['memory.enter'];
                 break;
             case 'R'; // Function return
                 $this->functions[$funcNr]['return'] = $parts[5];
