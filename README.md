@@ -1,6 +1,6 @@
-# XDebug Trace Tree
+# Xdebug Trace Tree
 
-This is a simple PHP script to display XDebug traces in a tree like visualization. It can collapse parts
+This is a simple PHP script to display [Xdebug](https://xdebug.org) traces in a tree like visualization. It can collapse parts
 that you're not interested in when analysing the trace, making it much easier to follow the program flow.
 
 Installation is simple. Just clone this dierectory to somewhere in your webserver and it should automatically
