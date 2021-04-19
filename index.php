@@ -12,7 +12,7 @@
     <label for="file">File:</label>
     <select name="file" id="file">
         <?php
-        $dir = ini_get('xdebug.trace_output_dir');
+        $dir = ini_get('xdebug.output_dir');
         if (!$dir) {
             $dir = '/tmp/';
         }
@@ -26,7 +26,7 @@
     <button type="submit">Load</button>
     <br/>
 
-    <p>Files are read from <code>xdebug.trace_output_dir = <?php echo htmlspecialchars($dir) ?></code></p>
+    <p>Files are read from <code>xdebug.output_dir = <?php echo htmlspecialchars($dir) ?></code></p>
 </form>
 
 <ul class="help">
